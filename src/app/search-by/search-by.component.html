@@ -1,0 +1,65 @@
+<div class="shadow-lg card ms-4 p-0" style="min-height:35rem;">
+    <!-- mat-card  -->
+    <div class="bg-warning card-header">
+        <span class="text-start fs-4">Search by</span>
+    </div>
+    <!-- <app-search-bar (childEvent)="fxn($event)"></app-search-bar> -->
+
+    <div class="row g-3 p-4">
+        <div class="col-2">
+
+            <input type="text" readonly class="form-control-plaintext" value="\">
+        </div>
+        <div class="col-3">
+            <input type="text" readonly class="form-control-plaintext" value="Firstname">
+        </div>
+        <div class="col-4">
+            <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control-md" [id]=firstNameId>
+
+        </div>
+    </div>
+    <!-- /// -->
+    <div class="row g-3 p-4">
+        <div class="col-2">
+
+            <input type="text" readonly class="form-control-plaintext" value="@">
+        </div>
+        <div class="col-3">
+            <input type="text" readonly class="form-control-plaintext" value="Lastname">
+        </div>
+        <div class="col-4">
+            <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control-md" [id]=lastNameId>
+        </div>
+    </div>
+    <!-- /// -->
+    <div class="row g-3 p-4">
+        <div class="col-2">
+
+            <input type="text" readonly class="form-control-plaintext" value="#">
+        </div>
+        <div class="col-3">
+            <input type="text" readonly class="form-control-plaintext" value="Char No">
+        </div>
+        <div class="col-4">
+            <input type="text" class="form-control-md" [(ngModel)]="charNo" name="charNo" [id]=charNoId>
+        </div>
+    </div>
+    <!-- /// -->
+    <div class="row g-3 p-4">
+        <div class="col-2">
+            <input type="text" readonly class="form-control-plaintext" value="$">
+        </div>
+        <div class="col-3">
+            <input type="text" readonly class="form-control-plaintext" value="Address 1">
+        </div>
+        <div class="col-4">
+            <input type="text" class="form-control-md" [(ngModel)]="address1" name="address1" [id]=address1Id>
+        </div>
+    </div>
+    <!-- </form> -->
+    <!-- <mat-card-title> -->
+
+    <!-- (change)="searchBarValueSetter($event)" -->
+</div>
+
+<!-- </mat-card> -->

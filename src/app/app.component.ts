@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+// root component of our application
 export class AppComponent {
-  title = 'practical-assignment';
+
+  public message: any;
+  public setterString: any;
 }
