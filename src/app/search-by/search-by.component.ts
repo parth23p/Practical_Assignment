@@ -25,9 +25,10 @@ export class SearchByComponent implements OnInit {
   public address1 = "";
   public setterString: any;
 
+
   @Input('parentData') public parentData: any;
 
-  // @Output() public search_by_to_bar = new EventEmitter();
+  @Output() public search_by_to_bar = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -54,28 +55,25 @@ export class SearchByComponent implements OnInit {
     this.lastName = this.secondSplit[1] ? this.secondSplit[1] : "";
     this.charNo = this.thirdSplit[0] ? this.thirdSplit[0] : "";
     this.address1 = this.thirdSplit[1] ? this.thirdSplit[1] : "";
-
-
-    // ? this.thirdSplit[0] : "";
-    // ? this.thirdSplit[1] : "";
   }
 
   searchBarValueSetter(event: any) {
     this.setterString = "";
     if (this.firstName) {
-      this.setterString = "'\'" + this.firstName;
+      this.setterString = "\\" + this.firstName;
     }
-    else if (this.lastName) {
-      this.setterString += "'@'" + this.lastName;
+    if (this.lastName) {
+      this.setterString += "@" + this.lastName;
     }
-    else if (this.charNo) {
-      this.setterString += "'#'" + this.charNo;
+    if (this.charNo) {
+      this.setterString += "#" + this.charNo;
     }
-    else if (this.address1) {
-      this.setterString += "'$'" + this.address1;
+    if (this.address1) {
+      this.setterString += "$" + this.address1;
     }
+    console.log(this.setterString);
 
-    // this.search_by_to_bar.emit(this.setterString);
+    this.search_by_to_bar.emit(this.setterString);
   }
 
 }

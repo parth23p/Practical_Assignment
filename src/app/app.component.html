@@ -3,9 +3,10 @@
 
   <div class="row">
     <div class="col-md-4 px-3 py-2">
-      <app-search-by [parentData]="message"></app-search-by>
-      <!--  (search_bar_set)="setterString=$event"-->
-      <!-- {{setterString}} -->
+      <app-search-by [parentData]="message" (search_by_to_bar)="setterString=$event"></app-search-by>
+      <!--  -->
+      <!--  -->
+      {{setterString}}
     </div>
 
 
@@ -13,8 +14,8 @@
       <div class="container">
         <div class="col-12 mx-auto p-2">
 
-          <app-search-bar (childEvent)="message=$event"></app-search-bar>
-          <!-- [setterData]="setterString" -->
+          <app-search-bar (childEvent)="message=$event" [setterData]="setterString"></app-search-bar>
+          <!--  -->
 
         </div>
         <div class="col-12 mx-auto p-2">

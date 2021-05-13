@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public message: any;
-  public setterString: any;
+  public setterString = "";
 }

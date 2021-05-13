@@ -3,7 +3,6 @@
     <div class="bg-warning card-header">
         <span class="text-start fs-4">Search by</span>
     </div>
-    <!-- <app-search-bar (childEvent)="fxn($event)"></app-search-bar> -->
 
     <div class="row g-3 p-4">
         <div class="col-2">
@@ -14,7 +13,8 @@
             <input type="text" readonly class="form-control-plaintext" value="Firstname">
         </div>
         <div class="col-4">
-            <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control-md" [id]=firstNameId>
+            <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control-md" [id]=firstNameId
+                (change)="searchBarValueSetter($event)">
 
         </div>
     </div>
@@ -28,7 +28,8 @@
             <input type="text" readonly class="form-control-plaintext" value="Lastname">
         </div>
         <div class="col-4">
-            <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control-md" [id]=lastNameId>
+            <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control-md" [id]=lastNameId
+                (change)="searchBarValueSetter($event)">
         </div>
     </div>
     <!-- /// -->
@@ -41,7 +42,8 @@
             <input type="text" readonly class="form-control-plaintext" value="Char No">
         </div>
         <div class="col-4">
-            <input type="text" [(ngModel)]="charNo" name="charNo" class="form-control-md" [id]=charNoId>
+            <input type="text" [(ngModel)]="charNo" name="charNo" class="form-control-md" [id]=charNoId
+                (change)="searchBarValueSetter($event)">
         </div>
     </div>
     <!-- /// -->
@@ -53,13 +55,9 @@
             <input type="text" readonly class="form-control-plaintext" value="Address 1">
         </div>
         <div class="col-4">
-            <input type="text" [(ngModel)]="address1" name="address1" class="form-control-md" [id]=address1Id>
+            <input type="text" [(ngModel)]="address1" name="address1" class="form-control-md" [id]=address1Id
+                (change)="searchBarValueSetter($event)">
         </div>
     </div>
-    <!-- </form> -->
-    <!-- <mat-card-title> -->
 
-    <!-- (change)="searchBarValueSetter($event)" -->
 </div>
-
-<!-- </mat-card> -->
