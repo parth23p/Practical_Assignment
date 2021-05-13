@@ -3,10 +3,10 @@
 
   <div class="row">
     <div class="col-md-4 px-3 py-2">
-      <app-search-by [parentData]="message" (search_by_to_bar)="setterString=$event"></app-search-by>
+      <app-search-by (search_by_to_bar)="setterString=$event" [parentData]="message"></app-search-by>
       <!--  -->
       <!--  -->
-      {{setterString}}
+      <!-- {{setterString}} -->
     </div>
 
 

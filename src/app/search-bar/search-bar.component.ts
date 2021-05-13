@@ -13,20 +13,24 @@ import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   public searchBarId = "searchBarId";
-  public searchBarValue = "";
+  public searchBarValue: any;
 
   @Input('setterData') public setterData: any;
   @Output() public childEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
-
+    console.log("setterdata:", this.setterData);
   }
   ngOnChanges(): void {
-    if (this.searchBarValue === "") {
-      this.searchBarValue = this.setterData;
-    }
+    this.searchBarValueSetter();
+    console.log("setterdata:", this.setterData);
+  }
 
+  searchBarValueSetter() {
+    // if (this.setterData !== "" && this.searchBarValue === "") {
+    this.searchBarValue = this.setterData;
+    // }
   }
 
   fireEvent(event: any) {

@@ -34,10 +34,7 @@ export class SearchByComponent implements OnInit {
   ngOnInit(): void {
   }
   ngOnChanges(): void {
-    // if (this.searchString.length != 0) {
     this.searchByValueSetter();
-    // this.searchBarValueSetter(this.ngOnChanges);
-    // }
   }
 
   searchByValueSetter() {
@@ -71,7 +68,7 @@ export class SearchByComponent implements OnInit {
     if (this.address1) {
       this.setterString += "$" + this.address1;
     }
-    console.log(this.setterString);
+    // console.log(this.setterString);
 
     this.search_by_to_bar.emit(this.setterString);
   }
