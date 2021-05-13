@@ -10,27 +10,27 @@ import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   public searchBarId = "searchBarId";
-  public searchBarValue: any;
-  public firstSplit: string[] = [];
-  public secondSplit: string[] = [];
-  public thirdSplit: string[] = [];
-  public splitAfterSlash: string[] = [];
-  public firstName: any;
-  public lastName: any;
-  public charNo: any;
-  public address1: any;
+  public searchBarValue = "";
+
   // @Input('setterData') public setterData: any;
   @Output() public childEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+    // if (this.searchBarValue == "") {
+    //   this.searchBarValue = this.setterData;
+    // }
   }
   // ngOnChanges(): void {
   //   this.searchBarValue = this.setterData;
   // }
+
   fireEvent(event: any) {
     this.searchBarValue = event.target.value;
     this.childEvent.emit(this.searchBarValue);
   }
-
+  clearSearchBar(event: any) {
+    this.searchBarValue = "";
+    this.childEvent.emit("");
+  }
 }

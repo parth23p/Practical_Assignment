@@ -21,8 +21,8 @@ export class SearchByComponent implements OnInit {
   public splitAfterSlash: string[] = [];
   public firstName: any;
   public lastName: any;
-  public charNo: any;
-  public address1: any;
+  public charNo = "";
+  public address1 = "";
   public setterString: any;
 
   @Input('parentData') public parentData: any;
@@ -35,38 +35,48 @@ export class SearchByComponent implements OnInit {
   ngOnChanges(): void {
     // if (this.searchString.length != 0) {
     this.searchByValueSetter();
+    // this.searchBarValueSetter(this.ngOnChanges);
     // }
   }
 
   searchByValueSetter() {
-
+    if (this.parentData === "") {
+      this.firstName = "";
+      this.lastName = "";
+      this.charNo = "";
+      this.address1 = "";
+    }
     this.searchString = this.parentData;
     this.firstSplit = this.searchString?.split("#");
     this.secondSplit = this.firstSplit[0]?.split("@");
     this.thirdSplit = this.firstSplit[1]?.split("$");
-    this.firstName = this.secondSplit[0];
-    this.lastName = this.secondSplit[1];
-    this.charNo = this.thirdSplit[0];
-    this.address1 = this.thirdSplit[1];
+    this.firstName = this.secondSplit[0].replace(/\\/g, '');
+    this.lastName = this.secondSplit[1] ? this.secondSplit[1] : "";
+    this.charNo = this.thirdSplit[0] ? this.thirdSplit[0] : "";
+    this.address1 = this.thirdSplit[1] ? this.thirdSplit[1] : "";
+
+
+    // ? this.thirdSplit[0] : "";
+    // ? this.thirdSplit[1] : "";
   }
 
-  // searchBarValueSetter(event: any) {
-  //   this.setterString = "";
-  //   if (this.firstName) {
-  //     this.setterString = "'\'" + this.firstName;
-  //   }
-  //   else if (this.lastName) {
-  //     this.setterString += "'@'" + this.lastName;
-  //   }
-  //   else if (this.charNo) {
-  //     this.setterString += "'#'" + this.charNo;
-  //   }
-  //   else if (this.address1) {
-  //     this.setterString += "'$'" + this.address1;
-  //   }
+  searchBarValueSetter(event: any) {
+    this.setterString = "";
+    if (this.firstName) {
+      this.setterString = "'\'" + this.firstName;
+    }
+    else if (this.lastName) {
+      this.setterString += "'@'" + this.lastName;
+    }
+    else if (this.charNo) {
+      this.setterString += "'#'" + this.charNo;
+    }
+    else if (this.address1) {
+      this.setterString += "'$'" + this.address1;
+    }
 
-  //   this.search_by_to_bar.emit(this.setterString);
-  // }
+    // this.search_by_to_bar.emit(this.setterString);
+  }
 
 }
 
