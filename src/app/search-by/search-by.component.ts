@@ -44,14 +44,16 @@ export class SearchByComponent implements OnInit {
       this.charNo = "";
       this.address1 = "";
     }
-    this.searchString = this.parentData;
-    this.firstSplit = this.searchString?.split("#");
-    this.secondSplit = this.firstSplit[0]?.split("@");
-    this.thirdSplit = this.firstSplit[1]?.split("$");
-    this.firstName = this.secondSplit[0].replace(/\\/g, '');
-    this.lastName = this.secondSplit[1] ? this.secondSplit[1] : "";
-    this.charNo = this.thirdSplit[0] ? this.thirdSplit[0] : "";
-    this.address1 = this.thirdSplit[1] ? this.thirdSplit[1] : "";
+    if (this.parentData[0] == "\\" || this.parentData[0] == "@" || this.parentData[0] == "#" || this.parentData[0] == "$") {
+      this.searchString = this.parentData;
+      this.firstSplit = this.searchString?.split("#");
+      this.secondSplit = this.firstSplit[0]?.split("@");
+      this.thirdSplit = this.firstSplit[1]?.split("$");
+      this.firstName = this.secondSplit[0].replace(/\\/, '');
+      this.lastName = this.secondSplit[1] ? this.secondSplit[1] : "";
+      this.charNo = this.thirdSplit[0] ? this.thirdSplit[0] : "";
+      this.address1 = this.thirdSplit[1] ? this.thirdSplit[1] : "";
+    }
   }
 
   searchBarValueSetter(event: any) {
