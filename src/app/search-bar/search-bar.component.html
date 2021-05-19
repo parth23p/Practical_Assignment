@@ -1,11 +1,11 @@
-<div class="shadow-lg card m-0 p-0 conatiner-fluid"
+<div class="shadow-lg card  conatiner-fluid bg-search-bar"
     style="max-height: 18rem;  border:1px solid blue;border-radius:12px">
-    <div class="card-header bg-warning"
+    <div class="card-header bg-warning px-2 py-0 fs-6"
         style=" border: 1px solid gold;border-top-left-radius: 10px;border-top-right-radius:10px;">
         <div class="row">
-            <div class="px-2 fs-6 col-5 "> Search</div>
+            <div class=" col-5"> Search</div>
             <!-- <h4 class="text-end" style="top:0%;position:relative">Use % sign to search anywhere in column.</h4> -->
-            <div class="px-2 fs-6 text-end col-7">Use % sign to search anywhere in column</div>
+            <div class=" text-end col-7">Use % sign to search anywhere in column.</div>
         </div>
     </div>
 
@@ -14,8 +14,9 @@
             <div class="justify-content-center d-flex g-3 p-2 col-12">
                 <div>
                     <input type="text" [(ngModel)]="searchBarValue" [id]=searchBarId class="form-control"
-                        placeholder="Search" (keyup)="fireEvent($event)" name="searchBar" size="75">
+                        placeholder="Search" (keyup)="fireEvent($event)" name="searchBar" size="70">
                 </div>
+                <br />
                 <!-- we can create reference variable name by using # symbol  followed by variable name-->
                 <div class="px-1">
                     <button type="button" class="btn btn-sm btn-outline-success" id="btn_Search">

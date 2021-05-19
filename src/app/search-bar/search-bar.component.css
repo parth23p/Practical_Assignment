@@ -1,6 +1,23 @@
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
     .card{
         width:25rem;
-        margin-left:44px;
+      margin-left:44px;
+      padding-bottom: 1px;
     }
   }
+  @media all and (device-width: 320px) and (orientation:portrait) {
+    *{
+        font-size: 11px;
+    }
+      }
+      @media all and (device-width: 280px) and (orientation:portrait) {
+        *{
+            font-size: 9px;
+        }
+          }
+  .bg-search-bar{
+    background-image: linear-gradient(180deg,whitesmoke 20%,rgb(158, 212, 233) 60%);
+}
+.bg-warning{
+    background-image: linear-gradient(180deg,rgb(245, 237, 189) 10%,rgb(255, 196, 0) 90%);
+}

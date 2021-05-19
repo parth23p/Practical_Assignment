@@ -2,7 +2,7 @@
   <h1 class="m-1 p-2" style="font-family: 'Poppins', sans-serif;font-weight: 700;">Search patient</h1>
 
   <div class="row">
-    <div class="col-md-4 p-0  mx-auto col-sm-12 ">
+    <div class="col-md-4 ps-2 pe-0 py-2 col-sm-12 ">
       <div class="container">
         <app-search-by (search_by_to_bar)="setterString=$event" [parentData]="message"></app-search-by>
       </div>
@@ -10,21 +10,21 @@
     </div>
 
 
-    <div class="col-md-8 col-sm-12">
+    <div class="col-md-8 col-sm-12 ps-0 py-2 pe-2">
       <div class="container">
-        <div class="col-12 mx-auto p-2">
+        <div class="col-12 pb-3">
 
           <app-search-bar (childEvent)="message=$event" [setterData]="setterString"></app-search-bar>
           <!--  -->
 
         </div>
-        <div class="col-12 mx-auto p-2">
+        <div class="col-12 py-3">
           <app-results></app-results>
         </div>
       </div>
 
     </div>
-    <div class="container justify-content-center mx-6 p-2" style="width: 82rem;">
+    <div class="container justify-content-center mx-6 p-2" style="width: 84rem;">
       <app-decision-bar></app-decision-bar>
     </div>
   </div>

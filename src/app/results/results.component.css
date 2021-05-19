@@ -2,5 +2,26 @@
     .card{
         width:25rem;
         margin-left:44px;
+        padding-top: 1px;
     }
   }
+  @media all and (device-width: 320px) and (orientation:portrait) {
+
+    *{
+        font-size: 11px;
+    }
+      }
+      @media all and (device-width: 280px) and (orientation:portrait) {
+        *{
+            font-size: 9px;
+        }
+          }
+  
+.bg-table-header{
+    background-image: linear-gradient(180deg, #bed3f3 5%, #0c7ada 80%);
+    
+}
+.bg-table{
+    background-image: linear-gradient(180deg,whitesmoke 5%,rgb(158, 212, 233) 80%);
+    
+}
