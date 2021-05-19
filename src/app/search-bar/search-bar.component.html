@@ -13,13 +13,14 @@
         <form>
             <div class="justify-content-center d-flex g-3 p-2 col-12">
                 <div>
-                    <input type="text" [(ngModel)]="searchBarValue" [id]=searchBarId class="form-control"
-                        placeholder="Search" (keyup)="fireEvent($event)" name="searchBar" size="70">
+                    <input type="text" [(ngModel)]="searchBarValue" [id]=searchBarId
+                        class="form-control form-control-md my-2" placeholder="Search" (keyup)="fireEvent($event)"
+                        name="searchBar" size="75">
                 </div>
                 <br />
                 <!-- we can create reference variable name by using # symbol  followed by variable name-->
                 <div class="px-1">
-                    <button type="button" class="btn btn-sm btn-outline-success" id="btn_Search">
+                    <button type="button" class="btn btn-sm btn-outline-success p-2 my-2" id="btn_Search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-search"
                             viewBox="0 0 16 16">
                             <path
@@ -29,7 +30,7 @@
                     </button>
                 </div>
                 <div class="px-1">
-                    <button type="reset" class="btn btn-sm btn-outline-danger" id="btn_Clear"
+                    <button type="reset" class="btn btn-sm btn-outline-danger p-2 my-2" id="btn_Clear"
                         (click)="clearSearchBar($event)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black"
                             class="bi bi-x-circle" viewBox="0 0 16 16">
