@@ -1,24 +1,25 @@
-<div class="shadow-lg card" style="max-height: 18rem;">
-    <div class="card-header bg-warning">
+<div class="shadow-lg card m-0 p-0 conatiner-fluid"
+    style="max-height: 18rem;  border:1px solid blue;border-radius:12px">
+    <div class="card-header bg-warning"
+        style=" border: 1px solid gold;border-top-left-radius: 10px;border-top-right-radius:10px;">
         <div class="row">
-            <div class="p-2 fs-4 col-5"> Search</div>
+            <div class="px-2 fs-6 col-5 "> Search</div>
             <!-- <h4 class="text-end" style="top:0%;position:relative">Use % sign to search anywhere in column.</h4> -->
-            <div class="p-2 fs-6 text-end col-7">Use % sign to search anywhere in column</div>
+            <div class="px-2 fs-6 text-end col-7">Use % sign to search anywhere in column</div>
         </div>
     </div>
-    <!-- mat-card-subtitle  -->
 
-    <mat-card-content>
+    <div>
         <form>
-            <div class="row p-4">
-                <div class="col-8 col-sm-8">
+            <div class="justify-content-center d-flex g-3 p-2 col-12">
+                <div>
                     <input type="text" [(ngModel)]="searchBarValue" [id]=searchBarId class="form-control"
-                        placeholder="Search" (keyup)="fireEvent($event)" name="searchBar">
+                        placeholder="Search" (keyup)="fireEvent($event)" name="searchBar" size="75">
                 </div>
                 <!-- we can create reference variable name by using # symbol  followed by variable name-->
-                <div class="col-sm">
-                    <button type="button" class="btn btn-outline-success" id="btn_Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search"
+                <div class="px-1">
+                    <button type="button" class="btn btn-sm btn-outline-success" id="btn_Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black" class="bi bi-search"
                             viewBox="0 0 16 16">
                             <path
                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -26,9 +27,10 @@
                         Search
                     </button>
                 </div>
-                <div class="col-sm">
-                    <button type="reset" class="btn btn-outline-danger" id="btn_Clear" (click)="clearSearchBar($event)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+                <div class="px-1">
+                    <button type="reset" class="btn btn-sm btn-outline-danger" id="btn_Clear"
+                        (click)="clearSearchBar($event)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="black"
                             class="bi bi-x-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                             <path
@@ -42,5 +44,5 @@
             </div>
 
         </form>
-    </mat-card-content>
+    </div>
 </div>

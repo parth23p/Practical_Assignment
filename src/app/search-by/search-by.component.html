@@ -1,65 +1,67 @@
-<div class="shadow-lg card ms-4 p-0 container" style="min-height:35rem; border: 1px solid blue;border-radius: 12px;">
-    <div class="bg-warning card-header">
-        <div class="p-2 fs-4" style="border:none">Search by</div>
+<div class="shadow-lg card mx-auto p-0 container" style="min-height:35rem; border:1px solid blue;border-radius:12px">
+    <div class="bg-warning card-header fs-6"
+        style="border: 1px solid white;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+        <div class="px-2 fs-6">Search by</div>
 
     </div>
-    <br />
-    <br />
     <div>
-        <div class="row g-3 px-1 py-2 ">
+        <br />
+        <br />
 
-            <div class="col-2 px-2">
+        <div class="d-flex justify-content-center g-3 px-1 py-2 col-12">
 
-                <input type="text" readonly class="form-control-plaintext px-2" value="\">
+            <div>
+
+                <input type="text" readonly class="form-control-plaintext" size="1" value="\">
             </div>
-            <div class="col-3 ">
-                <input type="text" readonly class="form-control-plaintext" value="Firstname">
+            <div>
+                <input type="text" readonly class="form-control-plaintext" size="13" value="Firstname">
             </div>
-            <div class="col-3">
-                <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control-md" [id]=firstNameId
-                    (change)="searchBarValueSetter($event)">
+            <div>
+                <input type="text" [(ngModel)]="firstName" name="firstName" size="18" class="form-control-md"
+                    [id]=firstNameId (change)="searchBarValueSetter($event)">
 
             </div>
         </div>
         <!-- /// -->
-        <div class="row g-3 px-1 py-2 ">
-            <div class="col-2 ">
+        <div class="d-flex justify-content-center g-3 px-1 py-2 col-12">
+            <div>
 
-                <input type="text" readonly class="form-control-plaintext px-2" value="@">
+                <input type="text" readonly class="form-control-plaintext" size="1" value="@">
             </div>
-            <div class="col-3 ">
-                <input type="text" readonly class="form-control-plaintext" value="Lastname">
+            <div>
+                <input type="text" readonly class="form-control-plaintext" size="13" value="Lastname">
             </div>
-            <div class="col-3">
-                <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control-md" [id]=lastNameId
+            <div>
+                <input type="text" [(ngModel)]="lastName" name="lastName" size="18" class="form-control-md"
+                    [id]=lastNameId (change)="searchBarValueSetter($event)">
+            </div>
+        </div>
+        <!-- /// -->
+        <div class="d-flex justify-content-center g-3 px-1 py-2 col-12">
+            <div>
+
+                <input type="text" readonly class="form-control-plaintext" size="1" value="#">
+            </div>
+            <div>
+                <input type="text" readonly class="form-control-plaintext" size="13" value="Char No">
+            </div>
+            <div>
+                <input type="text" [(ngModel)]="charNo" name="charNo" size="18" class="form-control-md" [id]=charNoId
                     (change)="searchBarValueSetter($event)">
             </div>
         </div>
         <!-- /// -->
-        <div class="row g-3 px-1 py-2">
-            <div class="col-2 ">
-
-                <input type="text" readonly class="form-control-plaintext px-2" value="#">
+        <div class="d-flex justify-content-center g-3 px-1 py-2 col-12">
+            <div>
+                <input type="text" readonly class="form-control-plaintext" size="1" value="$">
             </div>
-            <div class="col-3 ">
-                <input type="text" readonly class="form-control-plaintext" value="Char No">
+            <div>
+                <input type="text" readonly class="form-control-plaintext " size="13" value="Address1">
             </div>
-            <div class="col-3">
-                <input type="text" [(ngModel)]="charNo" name="charNo" class="form-control-md" [id]=charNoId
-                    (change)="searchBarValueSetter($event)">
-            </div>
-        </div>
-        <!-- /// -->
-        <div class="row g-3 px-1 py-2">
-            <div class="col-2 ">
-                <input type="text" readonly class="form-control-plaintext px-2" value="$">
-            </div>
-            <div class="col-3 ">
-                <input type="text" readonly class="form-control-plaintext" value="Address 1">
-            </div>
-            <div class="col-3">
-                <input type="text" [(ngModel)]="address1" name="address1" class="form-control-md" [id]=address1Id
-                    (change)="searchBarValueSetter($event)">
+            <div>
+                <input type="text" [(ngModel)]="address1" name="address1" size="18" class="form-control-md"
+                    [id]=address1Id (change)="searchBarValueSetter($event)">
             </div>
         </div>
     </div>

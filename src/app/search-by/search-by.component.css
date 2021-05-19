@@ -1,31 +1,6 @@
-/* @media screen and (device-aspect-ratio: 2/3) {
-*{
-    
-}
-}
-
-@media screen and (device-aspect-ratio: 40/71) {
-    *{
-        
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .card{
+        width:18rem;
+        padding:13px 2px;
     }
-}
-@media screen and (device-aspect-ratio: 375/667) {
-    *{
-       
-    }
-}
-
-
-@media screen and (device-aspect-ratio: 16/9) {
-*{
-
-}
-}
-
-
-@media screen and (device-aspect-ratio: 3/4) {
-*{
-    
-}
-}
-*/
+  }

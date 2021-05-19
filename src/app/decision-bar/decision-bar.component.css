@@ -1,14 +1,4 @@
-@media screen and (device-aspect-ratio: 2/3) {
-    *{
-        /* font-size: 10px; */
-    }
-    }
-    
-    @media screen and (device-aspect-ratio: 40/71) {
-        *{
-            /* font-size: 10px; */
-        }
-    }
+
 *{
     background-image: linear-gradient(180deg, #a1c4fd 0%, #dff0f8 100%);
     
